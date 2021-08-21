@@ -20,6 +20,8 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #include "dep.h"
 #include "debug.h"
 
+#define __ptr_t	void *
+
 #ifdef  HAVE_DIRENT_H
 # include <dirent.h>
 # define NAMLEN(dirent) strlen((dirent)->d_name)
