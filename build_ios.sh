@@ -169,9 +169,6 @@ build_make() {
      LDFLAGS=`echo "$LDFLAGS" | tr '\\' ' '`
   export LDFLAGS
 
-  export CPPFLAGS=$CFLAGS
-  export CXXFLAGS=$CFLAGS
-
   # export min version
   if [ $PERL_APPLETV -ne 0 ]; then
     export APPLETV_DEPLOYMENT_TARGET="$MIN_VERSION"
