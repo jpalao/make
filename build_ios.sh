@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# cp /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ar.h to corresponding location in iPhoneOS.sdk
+
 ############## CONFIG BEGIN ##############
 
 # perl binaries
@@ -179,6 +181,10 @@ build_make() {
   fi
 
   ./configure --host x86_64-apple-darwin --target aarch64-apple-darwin13 --without-guile
+  check_exit_code
+
+  git apply ios_patch.diff
+  git apply ios_patch2.diff
   check_exit_code
 
   make
