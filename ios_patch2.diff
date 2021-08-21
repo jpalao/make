@@ -1,7 +1,7 @@
-diff --git a/Makefile b/Makefile.new
+diff --git a/Makefile b/Makefile
 index a8f7b5b..242c56a 100644
 --- a/Makefile
-+++ b/Makefile.new
++++ b/Makefile
 @@ -259,7 +259,7 @@ am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
  am__v_CC_0 = @echo "  CC      " $@;
  am__v_CC_1 = 
