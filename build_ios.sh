@@ -130,7 +130,7 @@ build_make() {
   export SDKROOT=$DEVROOT/Developer/SDKs/iPhoneOS.sdk
 
   CFLAGS=' \
-    -arch armv7 \
+    -arch armv7 -arch arm64 
     -DPERL_USE_SAFE_PUTENV \
     -DTARGET_OS_IPHONE \
     -fno-common \
@@ -151,7 +151,7 @@ build_make() {
   export CFLAGS
 
   LDFLAGS=' \
-    -arch armv7 \
+    -arch armv7 -arch arm64 \
     -DPERL_USE_SAFE_PUTENV \
     -DTARGET_OS_IPHONE \
     -no-cpp-precomp \
