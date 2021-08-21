@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile.new
+index a8f7b5b..242c56a 100644
+--- a/Makefile
++++ b/Makefile.new
+@@ -259,7 +259,7 @@ am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
+ am__v_CC_0 = @echo "  CC      " $@;
+ am__v_CC_1 = 
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -dynamiclib -o $@.dylib
+ AM_V_CCLD = $(am__v_CCLD_$(V))
+ am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
