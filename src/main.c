@@ -101,6 +101,8 @@ void exit (int) NORETURN;
 double atof ();
 #endif
 
+#define EXPORT __attribute__((visibility("default")))
+
 static void clean_jobserver (int status);
 static void print_data_base (void);
 static void print_version (void);
@@ -1064,8 +1066,8 @@ reset_jobserver (void)
 int
 main (int argc, char **argv)
 #else
-int
-main (int argc, char **argv, char **envp)
+EXPORT int
+make_exec (int argc, char **argv, char **envp)
 #endif
 {
   static char *stdin_nm = 0;
