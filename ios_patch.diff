@@ -1,6 +1,6 @@
-diff --git a/Makefile.new b/Makefile
+diff --git a/Makefile b/Makefile
 index 592baf2..a8f7b5b 100644
---- a/Makefile.new
+--- a/Makefile
 +++ b/Makefile
 @@ -1132,8 +1132,6 @@ EXTRA_DIST = ChangeLog README build.sh build.cfg.in $(man_MANS) \
  		README.Amiga SCOPTIONS src/config.ami \
