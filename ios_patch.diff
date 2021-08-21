@@ -1,0 +1,36 @@
+diff --git a/Makefile.new b/Makefile
+index 592baf2..a8f7b5b 100644
+--- a/Makefile.new
++++ b/Makefile
+@@ -1132,8 +1132,6 @@ EXTRA_DIST = ChangeLog README build.sh build.cfg.in $(man_MANS) \
+ 		README.Amiga SCOPTIONS src/config.ami \
+ 		README.DOS builddos.bat src/configh.dos \
+ 		README.W32 build_w32.bat src/config.h.W32 \
+-		README.VMS makefile.com src/config.h-vms src/vmsjobs.c \
+-		vms_export_symbol_test.com \
+ 		src/gmk-default.scm src/gmk-default.h \
+ 		$(mk_FILES) $(m4_FILES) $(test_FILES)
+ 
+@@ -2131,10 +2129,10 @@ PERLFLAGS := -w
+ # We like mondo-warnings!
+ # Also force comments to be preserved.  This helps when using ccache, in
+ # combination with GCC 7's implicit-fallthrough warning.
+-MAKE_CFLAGS := -C -Wall -Wextra -Werror -Wwrite-strings -Wshadow \
++MAKE_CFLAGS := -Wall -Wextra -Wwrite-strings -Wshadow \
+ 	-Wdeclaration-after-statement -Wbad-function-cast -Wformat-security \
+-	-Wtype-limits -Wunused-but-set-parameter -Wlogical-op -Wpointer-arith \
+-	-Wignored-qualifiers -Wformat-signedness -Wduplicated-cond
++	-Wtype-limits -Wpointer-arith \
++	-Wignored-qualifiers 
+ 
+ AM_CFLAGS += $(MAKE_CFLAGS)
+ 
+@@ -2146,7 +2144,7 @@ MAKE_MAINTAINER_MODE := -DMAKE_MAINTAINER_MODE
+ AM_CPPFLAGS += $(MAKE_MAINTAINER_MODE)
+ 
+ TEMPLATES = README README.DOS README.W32 README.OS2 \
+-	    src/config.ami src/configh.dos src/config.h.W32 src/config.h-vms
++	    src/config.ami src/configh.dos src/config.h.W32
+ 
+ all: $(TEMPLATES)
+ 
